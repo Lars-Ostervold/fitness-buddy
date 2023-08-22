@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 // @mui
 import PropTypes from 'prop-types';
-import { Card, Typography, CardHeader, CardContent, IconButton, Box } from '@mui/material';
+import { Card, Typography, CardHeader, CardContent, IconButton } from '@mui/material';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
-import { Timeline, TimelineDot, TimelineItem, TimelineContent, TimelineSeparator, TimelineConnector, TimelineOppositeContent } from '@mui/lab';
+import { Timeline, TimelineDot, TimelineItem, TimelineContent, TimelineSeparator, TimelineConnector } from '@mui/lab';
 // utils
 import axios from 'axios';
 
@@ -20,15 +20,11 @@ const colorOptions = ['primary', 'secondary', 'error', 'info', 'success', 'warni
 
 
 export default function AppOrderTimeline({ title, list, ...other }) {
-  console.log("This is list:")
-  console.log(list)
   const [exerciseList, setExerciseList] = useState([]); // Initialize the state with the initial list of exercises
   // Update exerciseList when the list prop changes
   useEffect(() => {
     setExerciseList(list);
   }, [list]);
-  console.log("This is exerciseList:")
-  console.log(exerciseList)
   
   const handleRerollExercise = (exercise, exerciseIndex) => {
     const payload = {

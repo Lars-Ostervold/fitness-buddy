@@ -1,12 +1,9 @@
 import { Helmet } from 'react-helmet-async';
-import { faker } from '@faker-js/faker';
 import { useState } from 'react';
 import axios from 'axios';
 // @mui
 import { useTheme } from '@mui/material/styles';
 import { Grid, Container, Typography, Select, MenuItem, FormControlLabel, Checkbox, FormGroup, Button } from '@mui/material';
-// components
-import Iconify from '../components/iconify';
 // sections
 import {
   AppOrderTimeline,
@@ -80,8 +77,6 @@ export default function DashboardAppPage() {
         } else { 
           setExerciseData(exerciseArray);
         }
-        console.log(exerciseData)
-        setExerciseData([])
       })
       .catch((error) => {
         // Handle the error
