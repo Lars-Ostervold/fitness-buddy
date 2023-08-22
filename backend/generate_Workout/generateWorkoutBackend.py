@@ -1,5 +1,5 @@
 import random
-from .exercise_lists import *
+from exercise_lists import *
 
 def get_split_selection(workout_days_per_week, user_experience):
     split_dict = {}
@@ -301,4 +301,4 @@ def test_main():
 # test_get_split_selection()
 # test_generate_workout_skeleton()
 # test_select_exercises()
-# test_main()
+test_main()
